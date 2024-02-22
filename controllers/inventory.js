@@ -1,0 +1,1 @@
+// inventory collection controller
