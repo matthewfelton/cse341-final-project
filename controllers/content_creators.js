@@ -1,7 +1,5 @@
 // content creators collection controller
 
-// content creators collection controller
-
 // points variable to path of db connection information 
 const mongodb = require('../db/connection');
 // important ObjectId and allows single pull content creator to work and not error out and murder the server

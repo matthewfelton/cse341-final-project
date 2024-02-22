@@ -1,7 +1,5 @@
 // inventory collection controller
 
-// inventorys collection controller
-
 // points variable to path of db connection information 
 const mongodb = require('../db/connection');
 // important ObjectId and allows single pull inventory to work and not error out and murder the server
