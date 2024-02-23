@@ -1,1 +1,31 @@
-// firstName, LastName, title
+[
+    {
+        "firstName": "Annmarie",
+        "lastName": "SanSevero",
+        "jobTitle": "Author"
+    }, 
+
+    {
+        "firstName": "Matthew",
+        "lastName": "Felton",
+        "jobTitle": "Director"
+    }, 
+
+    {
+        "firstName": "Michelle",
+        "lastName": "Markham",
+        "jobTitle": "Producer"
+    }, 
+
+    {
+        "firstName": "Kevin",
+        "lastName": "Anderson",
+        "jobTitle": "Author"
+    },
+
+    {
+        "firstName": "Aaron",
+        "lastName": "Sorkin",
+        "jobTitle": "Screenwriter"
+    }
+]
