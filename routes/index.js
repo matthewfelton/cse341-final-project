@@ -3,8 +3,8 @@
 const express = require('express');
 const router = express.Router();
 
-// swagger route commented till using to prevent errors
-// router.use('/api-doc', require('./swagger'));
+
+router.use('/api-doc', require('./swagger'));
 
 
 // collection routes 

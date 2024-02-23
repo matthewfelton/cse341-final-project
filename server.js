@@ -13,6 +13,7 @@ app
         methods: 'GET, HEAD, PUT, PATCH, POST, DELETE', // Add DELETE and PUT to the allowed methods
         credentials: true, // Include cookies or authorization headers
     }))
+    .use(express.json())
     .use(express.urlencoded({ extended: true }))
     .use('/', require('./routes'));
     

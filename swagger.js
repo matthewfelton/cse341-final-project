@@ -5,7 +5,7 @@ const doc = {
         title: 'Media Management System API',
         description: 'Media Management System  API',
     },
-    host: 'https://cse341-final-project-my43.onrender.com',
+    host: 'cse341-final-project-my43.onrender.com',
     schemes: ['https'],
 };
 
