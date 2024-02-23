@@ -65,11 +65,12 @@ const saveEvent = (req, res, next) => {
 
 const saveInventory = (req, res, next) => {
     const validationRule = {
-        title: 'required|string',
-        genre: 'required|string',
-        rating: 'required|string',
-        runTime: 'required|string',
-        airTime: 'required|string'
+        contentTitle: 'required|string',
+        contentType: 'required|string',
+        contentCreator: 'required|string',
+        quantity: 'numeric|min:0|max:100',
+        averageCondition: 'string',
+        physicalCopy: 'required|boolean'
     };
     validator(req.body, validationRule, {}, (err, status) => {
         if (!status) {

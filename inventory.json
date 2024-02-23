@@ -7,9 +7,7 @@
         "quantity": "12",
         "averageCondition": "fair", 
         "physicalCopy": true
-
     },
-
     {
         "contentTitle": "Death and the Taxman",
         "contentType": "ebook",
@@ -18,9 +16,7 @@
         "quantity": "2",
         "averageCondition": "excellent", 
         "physicalCopy": false
-
     },
-
     {
         "contentTitle": "The Gemini Experiment",
         "contentType": "Book",
@@ -29,9 +25,7 @@
         "quantity": "13",
         "averageCondition": "excellent", 
         "physicalCopy": true
-
     },
-
     {
         "contentTitle": "When Software Attacks",
         "contentType": "DVD",
@@ -40,9 +34,7 @@
         "quantity": "5",
         "averageCondition": "good", 
         "physicalCopy": false
-
     },
-
     {
         "contentTitle": "Odd Thomas",
         "contentType": "Books",
@@ -51,7 +43,5 @@
         "quantity": "5",
         "averageCondition": "good", 
         "physicalCopy": true
-
     }
-      
 ]

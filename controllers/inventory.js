@@ -54,13 +54,13 @@ const getSingle = async (req, res, next) => {
 const newInventory = async (req, res) => {
     try {
         const inventory = {
-            title: req.body.title,
-            genre: req.body.genre,
-            rating: req.body.rating,
-            runTime: req.body.runTime,
-            releaseYear: req.body.releaseYear,
-            director: req.body.director,
-            metascore: req.body.metascore
+            contentTitle: req.body.contentTitle,
+            contentType: req.body.contentType,
+            contentCreator: req.body.contentCreator,
+            releaseDate: req.body.releaseDate,
+            quantity: req.body.quantity,
+            averageCondition: req.body.averageCondition,
+            physicalCopy: req.body.physicalCopy
         };
         const response = await mongodb.getDb().db().collection('inventory').insertOne(inventory);
         if (response.acknowledged) {
@@ -87,13 +87,13 @@ const updateInventory = async (req, res) => {
     const inventoryId = new ObjectId(inventory_Id);
       // Creating a inventory object from the request body
     const inventory = {
-        title: req.body.title,
-        genre: req.body.genre,
-        rating: req.body.rating,
-        runTime: req.body.runTime,
-        releaseYear: req.body.releaseYear,
-        director: req.body.director,
-        metascore: req.body.metascore
+        contentTitle: req.body.contentTitle,
+        contentType: req.body.contentType,
+        contentCreator: req.body.contentCreator,
+        releaseDate: req.body.releaseDate,
+        quantity: req.body.quantity,
+        averageCondition: req.body.averageCondition,
+        physicalCopy: req.body.physicalCopy
     };
       // Updating the inventory with the specified ID in the 'inventory' collection
     const response = await mongodb.getDb().db().collection('inventory').replaceOne({ _id: inventoryId }, inventory);
