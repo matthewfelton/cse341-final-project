@@ -1,1 +1,47 @@
-// eventName, creator, date
+[
+    {
+        "eventName": "Author Speaker",
+        "eventType": "Book Signing",
+        "creator": "Annmarie SanSevero",
+        "date": "2024-07-15",
+        "ticketed": false,
+        "cost": 0.00
+    }, 
+
+    {
+        "eventName": "How to Write Fight Scenes",
+        "eventType": "Workshop",
+        "creator": "Jonathan Maberry",
+        "date": "2024-04-24",
+        "ticketed": true,
+        "cost": 50.00
+    },
+
+    {
+        "eventName": "Community Advocacy",
+        "eventType": "Lecture",
+        "creator": "Governor Sanders",
+        "date": "2024-05-01",
+        "ticketed": true,
+        "cost": 20.00
+    }, 
+
+    {
+        "eventName": "Learn to Sing",
+        "eventType": "Workshop",
+        "creator": "Danuta Raine",
+        "date": "2024-06-13",
+        "ticketed": false,
+        "cost": 0.00
+    }, 
+
+    {
+        "eventName": "Women's Self Defense",
+        "eventType": "Hands-on Workshop",
+        "creator": "Chuck Norris",
+        "date": "2024-07-11",
+        "ticketed": true,
+        "cost": 5.00
+    }
+      
+]
