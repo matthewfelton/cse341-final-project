@@ -1,1 +1,57 @@
-//title, content, released, 
+[
+    {
+        "contentTitle": "Women's Self Defense",
+        "contentType": "DVD",
+        "contentCreator": "Chuck Norris",
+        "releaseDate": "2012",
+        "quantity": "12",
+        "averageCondition": "fair", 
+        "physicalCopy": true
+
+    },
+
+    {
+        "contentTitle": "Death and the Taxman",
+        "contentType": "ebook",
+        "contentCreator": "David Hankins",
+        "releaseDate": "2024",
+        "quantity": "2",
+        "averageCondition": "excellent", 
+        "physicalCopy": false
+
+    },
+
+    {
+        "contentTitle": "The Gemini Experiment",
+        "contentType": "Book",
+        "contentCreator": "Annmarie SanSevero",
+        "releaseDate": "2024",
+        "quantity": "13",
+        "averageCondition": "excellent", 
+        "physicalCopy": true
+
+    },
+
+    {
+        "contentTitle": "When Software Attacks",
+        "contentType": "DVD",
+        "contentCreator": "Matthew Felton",
+        "releaseDate": "2023",
+        "quantity": "5",
+        "averageCondition": "good", 
+        "physicalCopy": false
+
+    },
+
+    {
+        "contentTitle": "Odd Thomas",
+        "contentType": "Books",
+        "contentCreator": "Dean Koontz",
+        "releaseDate": "2008",
+        "quantity": "5",
+        "averageCondition": "good", 
+        "physicalCopy": true
+
+    }
+      
+]
