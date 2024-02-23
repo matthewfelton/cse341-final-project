@@ -1,0 +1,48 @@
+[
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "dateBorrowed": "2024-01-22",
+    "inventoryBorrowed": "Death and the Taxman",
+    "dateDue": "2024-03-22",
+    "conditionReturned": "n/a"
+},
+
+{
+    "firstName": "Ben",
+    "lastName": "Jones",
+    "dateBorrowed": "2023-12-31",
+    "inventoryBorrowed": "Dune",
+    "dateDue": "2024-02-31",
+    "conditionReturned": "n/a"
+},
+
+{
+    "firstName": "Catherine",
+    "lastName": "McMillan",
+    "dateBorrowed": "2024-01-05",
+    "inventoryBorrowed": "Darwin's Cipher",
+    "dateDue": "2024-02-05",
+    "conditionReturned": "good"
+}, 
+
+{
+    "firstName": "Annmarie",
+    "lastName": "SanSevero",
+    "dateBorrowed": "2023-12-24",
+    "inventoryBorrowed": "Darwin's Cipher",
+    "dateDue": "2024-02-24",
+    "conditionReturned": "New"
+},
+
+{
+    "firstName": "Matthew",
+    "lastName": "Felton",
+    "dateBorrowed": "2024-01-10",
+    "inventoryBorrowed": "Among the Hidden",
+    "dateDue": "2024-02-10",
+    "conditionReturned": "good"
+}
+
+]
+  
