@@ -54,13 +54,9 @@ const getSingle = async (req, res, next) => {
 const newContentCreators = async (req, res) => {
     try {
         const creator = {
-            title: req.body.title,
-            genre: req.body.genre,
-            rating: req.body.rating,
-            runTime: req.body.runTime,
-            releaseYear: req.body.releaseYear,
-            director: req.body.director,
-            metascore: req.body.metascore
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            jobTitle: req.body.jobTitle
         };
         const response = await mongodb.getDb().db().collection('content_creators').insertOne(creator);
         if (response.acknowledged) {
@@ -87,13 +83,9 @@ const updateContentCreators = async (req, res) => {
     const creatorId = new ObjectId(creator_Id);
       // Creating a content creator object from the request body
     const creator = {
-        title: req.body.title,
-        genre: req.body.genre,
-        rating: req.body.rating,
-        runTime: req.body.runTime,
-        releaseYear: req.body.releaseYear,
-        director: req.body.director,
-        metascore: req.body.metascore
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        jobTitle: req.body.jobTitle
     };
       // Updating the content creator with the specified ID in the 'content creator' collection
     const response = await mongodb.getDb().db().collection('content_creators').replaceOne({ _id: creatorId }, creator);
