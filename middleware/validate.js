@@ -2,13 +2,12 @@ const validator = require('../helpers/validate');
 
 const saveBorrowers = (req, res, next) => {
     const validationRule = {
-        title: 'required|string',
-        genre: 'required|string',
-        rating: 'required|string',
-        runTime: 'required|string',
-        releaseYear: 'numeric|digits:4',
-        director: 'required|string',
-        metascore: 'numeric|min:0|max:100'
+        firstName: 'required|string',
+        lastName: 'required|string',
+        dateBorrowed: 'required|date_format:YYYY-MM-D',
+        inventoryBorrowed: 'required|string',
+        dateDue: 'required|date_format:YYYY-MM-D',
+        conditionReturned: 'required|string'
     };
     validator(req.body, validationRule, {}, (err, status) => {
         if (!status) {

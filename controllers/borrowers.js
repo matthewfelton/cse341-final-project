@@ -54,13 +54,12 @@ const getSingle = async (req, res, next) => {
 const newBorrower = async (req, res) => {
     try {
         const borrower = {
-            title: req.body.title,
-            genre: req.body.genre,
-            rating: req.body.rating,
-            runTime: req.body.runTime,
-            releaseYear: req.body.releaseYear,
-            director: req.body.director,
-            metascore: req.body.metascore
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            dateBorrowed: req.body.dateBorrowed,
+            inventoryBorrowed: req.body.inventoryBorrowed,
+            dateDue: req.body.dateDue,
+            conditionReturned: req.body.conditionReturned
         };
         const response = await mongodb.getDb().db().collection('borrower').insertOne(borrower);
         if (response.acknowledged) {
@@ -87,13 +86,12 @@ const updateBorrower = async (req, res) => {
     const borrowerId = new ObjectId(borrower_Id);
       // Creating a borrower object from the request body
     const borrower = {
-        title: req.body.title,
-        genre: req.body.genre,
-        rating: req.body.rating,
-        runTime: req.body.runTime,
-        releaseYear: req.body.releaseYear,
-        director: req.body.director,
-        metascore: req.body.metascore
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        dateBorrowed: req.body.dateBorrowed,
+        inventoryBorrowed: req.body.inventoryBorrowed,
+        dateDue: req.body.dateDue,
+        conditionReturned: req.body.conditionReturned
     };
       // Updating the borrower with the specified ID in the 'borrower' collection
     const response = await mongodb.getDb().db().collection('borrower').replaceOne({ _id: borrowerId }, borrower);
