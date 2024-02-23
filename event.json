@@ -7,7 +7,6 @@
         "ticketed": false,
         "cost": 0.00
     }, 
-
     {
         "eventName": "How to Write Fight Scenes",
         "eventType": "Workshop",
@@ -16,7 +15,6 @@
         "ticketed": true,
         "cost": 50.00
     },
-
     {
         "eventName": "Community Advocacy",
         "eventType": "Lecture",
@@ -25,7 +23,6 @@
         "ticketed": true,
         "cost": 20.00
     }, 
-
     {
         "eventName": "Learn to Sing",
         "eventType": "Workshop",
@@ -34,7 +31,6 @@
         "ticketed": false,
         "cost": 0.00
     }, 
-
     {
         "eventName": "Women's Self Defense",
         "eventType": "Hands-on Workshop",
@@ -43,5 +39,4 @@
         "ticketed": true,
         "cost": 5.00
     }
-      
 ]

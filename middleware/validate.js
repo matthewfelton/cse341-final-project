@@ -4,9 +4,9 @@ const saveBorrowers = (req, res, next) => {
     const validationRule = {
         firstName: 'required|string',
         lastName: 'required|string',
-        dateBorrowed: 'required|date_format:YYYY-MM-D',
+        dateBorrowed: 'required|date|date_format:YYYY-MM-DD',
         inventoryBorrowed: 'required|string',
-        dateDue: 'required|date_format:YYYY-MM-D',
+        dateDue: 'required|date|date_format:YYYY-MM-DD',
         conditionReturned: 'required|string'
     };
     validator(req.body, validationRule, {}, (err, status) => {
@@ -43,11 +43,12 @@ const saveContentCreators = (req, res, next) => {
 
 const saveEvent = (req, res, next) => {
     const validationRule = {
-        title: 'required|string',
-        genre: 'required|string',
-        rating: 'required|string',
-        runTime: 'required|string',
-        airTime: 'required|string'
+        eventName: 'required|string',
+        eventType: 'required|string',
+        creator: 'required|string',
+        date:'required|date|date_format:YYYY-MM-DD',
+        ticketed: 'required|boolean',
+        cost: 'required|string'
     };
     validator(req.body, validationRule, {}, (err, status) => {
         if (!status) {

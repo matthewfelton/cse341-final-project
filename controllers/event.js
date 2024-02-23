@@ -54,13 +54,12 @@ const getSingle = async (req, res, next) => {
 const newEvent = async (req, res) => {
     try {
         const event = {
-            title: req.body.title,
-            genre: req.body.genre,
-            rating: req.body.rating,
-            runTime: req.body.runTime,
-            releaseYear: req.body.releaseYear,
-            director: req.body.director,
-            metascore: req.body.metascore
+            eventName: req.body.eventName,
+            eventType: req.body.eventType,
+            creator: req.body.creator,
+            date: req.body.date,
+            ticketed: req.body.ticketed,
+            cost: req.body.cost
         };
         const response = await mongodb.getDb().db().collection('event').insertOne(event);
         if (response.acknowledged) {
@@ -87,13 +86,12 @@ const updateEvent = async (req, res) => {
     const eventId = new ObjectId(event_Id);
       // Creating a event object from the request body
     const event = {
-        title: req.body.title,
-        genre: req.body.genre,
-        rating: req.body.rating,
-        runTime: req.body.runTime,
-        releaseYear: req.body.releaseYear,
-        director: req.body.director,
-        metascore: req.body.metascore
+        eventName: req.body.eventName,
+        eventType: req.body.eventType,
+        creator: req.body.creator,
+        date: req.body.date,
+        ticketed: req.body.ticketed,
+        cost: req.body.cost
     };
       // Updating the event with the specified ID in the 'event' collection
     const response = await mongodb.getDb().db().collection('event').replaceOne({ _id: eventId }, event);
