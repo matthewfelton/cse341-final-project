@@ -9,7 +9,7 @@ const ObjectId = require('mongodb').ObjectId;
 const getAll = async (req, res, next) => {
     try {
         // Using MongoDB's async API to get the 'borrower' collection 
-        const result = await mongodb.getDb().db().collection('borrower').find();
+        const result = await mongodb.getDb().db().collection('borrowers').find();
         
         // Converting the result to an array
         const lists = await result.toArray();
@@ -61,7 +61,7 @@ const newBorrower = async (req, res) => {
             dateDue: req.body.dateDue,
             conditionReturned: req.body.conditionReturned
         };
-        const response = await mongodb.getDb().db().collection('borrower').insertOne(borrower);
+        const response = await mongodb.getDb().db().collection('borrowers').insertOne(borrower);
         if (response.acknowledged) {
             res.status(201).json(response);
         } else {
@@ -94,7 +94,7 @@ const updateBorrower = async (req, res) => {
         conditionReturned: req.body.conditionReturned
     };
       // Updating the borrower with the specified ID in the 'borrower' collection
-    const response = await mongodb.getDb().db().collection('borrower').replaceOne({ _id: borrowerId }, borrower);
+    const response = await mongodb.getDb().db().collection('borrowers').replaceOne({ _id: borrowerId }, borrower);
     console.log('Update Response:', response);
       // Responding with status 204 if the borrower is successfully updated
     if (response.modifiedCount > 0) {
@@ -121,7 +121,7 @@ const deleteBorrrower = async (req, res) => {
     }
     const borrowerId = new ObjectId(borrower_Id);
       // Removing the borrower with the specified ID from the 'borrower' collection
-    const response = await mongodb.getDb().db().collection('borrower').deleteOne({ _id: borrowerId });
+    const response = await mongodb.getDb().db().collection('borrowers').deleteOne({ _id: borrowerId });
         console.log(response);
         // Responding with status 204 if the borrower is successfully deleted
         if (response.deletedCount > 0) {

@@ -9,7 +9,7 @@ const ObjectId = require('mongodb').ObjectId;
 const getAll = async (req, res, next) => {
     try {
         // Using MongoDB's async API to get the 'content creator' collection 
-        const result = await mongodb.getDb().db().collection('content_creator').find();
+        const result = await mongodb.getDb().db().collection('content_creators').find();
         
         // Converting the result to an array
         const lists = await result.toArray();
