@@ -1,5 +1,5 @@
 {
-  "name": "cse341-final-project",
+  "name": "cse341-final-project-media-management-system",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,7 +10,7 @@
     "swagger": "node ./swagger.js"
   },
   "keywords": [],
-  "author": "Matthew Felton",
+  "author": "Matthew Felton, Michelle Markham, Annmarie SanSevero",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
