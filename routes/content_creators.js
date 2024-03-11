@@ -5,19 +5,19 @@ const router = express.Router();
 
 const contentCreatorsController = require('../controllers/content_creators')
 const validation = require('../middleware/validate');
-//const OAuth = require("../middleware/authorize");
+const OAuth = require("../middleware/authorize");
 
 // Validation and Oauth added after testing of routes
 
-router.get('/', contentCreatorsController.getAll);
+router.get('/', OAuth.checkLogAll, contentCreatorsController.getAll);
 
-router.get('/:id', contentCreatorsController.getSingle);
+router.get('/:id', OAuth.checkLogAll, contentCreatorsController.getSingle);
 
-router.post('/', validation.saveContentCreators, contentCreatorsController.newContentCreators);
+router.post('/', OAuth.checkLogAll, validation.saveContentCreators, contentCreatorsController.newContentCreators);
 
-router.put('/:id', validation.saveContentCreators, contentCreatorsController.updateContentCreators);
+router.put('/:id', OAuth.checkLogAll, validation.saveContentCreators, contentCreatorsController.updateContentCreators);
 
-router.delete('/:id',contentCreatorsController.deleteContentCreators);
+router.delete('/:id', OAuth.checkLogAll, contentCreatorsController.deleteContentCreators);
 
 // export module for rest of code to use
 module.exports = router;
