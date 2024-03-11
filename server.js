@@ -7,6 +7,7 @@ const mongodb = require('./db/connection');
 
 const port = process.env.port || 8080;
 
+const { auth } = require('express-openid-connect');
 
 // config for 0auth
 const config = {
@@ -42,7 +43,7 @@ process.on('uncaughtException', (err, origin) => {
     console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
 });
 
-const { auth } = require('express-openid-connect');
+
 
 
 mongodb.initDb((err) => {
