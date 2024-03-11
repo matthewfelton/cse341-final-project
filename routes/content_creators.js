@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 const contentCreatorsController = require('../controllers/content_creators')
-//const validation = require('../middleware/validate');
+const validation = require('../middleware/validate');
 //const OAuth = require("../middleware/authorize");
 
 // Validation and Oauth added after testing of routes
@@ -13,9 +13,9 @@ router.get('/', contentCreatorsController.getAll);
 
 router.get('/:id', contentCreatorsController.getSingle);
 
-router.post('/', contentCreatorsController.newContentCreators);
+router.post('/', validation.saveContentCreators, contentCreatorsController.newContentCreators);
 
-router.put('/:id', contentCreatorsController.updateContentCreators);
+router.put('/:id', validation.saveContentCreators, contentCreatorsController.updateContentCreators);
 
 router.delete('/:id',contentCreatorsController.deleteContentCreators);
 

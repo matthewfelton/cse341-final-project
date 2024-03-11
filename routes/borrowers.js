@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 const borrowerController = require('../controllers/borrowers')
-//const validation = require('../middleware/validate');
+const validation = require('../middleware/validate');
 //const OAuth = require("../middleware/authorize");
 
 // Validation and Oauth added after testing of routes
@@ -13,9 +13,9 @@ router.get('/', borrowerController.getAll);
 
 router.get('/:id', borrowerController.getSingle);
 
-router.post('/', borrowerController.newBorrower);
+router.post('/', validation.saveBorrowers, borrowerController.newBorrower);
 
-router.put('/:id', borrowerController.updateBorrower);
+router.put('/:id', validation.saveBorrowers, borrowerController.updateBorrower);
 
 router.delete('/:id',borrowerController.deleteBorrrower);
 

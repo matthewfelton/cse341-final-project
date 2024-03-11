@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 const eventController = require('../controllers/event')
-//const validation = require('../middleware/validate');
+const validation = require('../middleware/validate');
 //const OAuth = require("../middleware/authorize");
 
 // Validation and Oauth added after testing of routes
@@ -13,9 +13,9 @@ router.get('/', eventController.getAll);
 
 router.get('/:id', eventController.getSingle);
 
-router.post('/', eventController.newEvent);
+router.post('/', validation.saveEvent, eventController.newEvent);
 
-router.put('/:id', eventController.updateEvent);
+router.put('/:id', validation.saveEvent, eventController.updateEvent);
 
 router.delete('/:id',eventController.deleteEvent);
 
