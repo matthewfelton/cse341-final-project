@@ -4,9 +4,9 @@ const saveBorrowers = (req, res, next) => {
     const validationRule = {
         firstName: 'required|string',
         lastName: 'required|string',
-        dateBorrowed: 'required|date|date_format:YYYY-MM-DD',
+        dateBorrowed: 'required|string',
         inventoryBorrowed: 'required|string',
-        dateDue: 'required|date|date_format:YYYY-MM-DD',
+        dateDue: 'required|string',
         conditionReturned: 'required|string'
     };
     validator(req.body, validationRule, {}, (err, status) => {
@@ -46,7 +46,7 @@ const saveEvent = (req, res, next) => {
         eventName: 'required|string',
         eventType: 'required|string',
         creator: 'required|string',
-        date:'required|date|date_format:YYYY-MM-DD',
+        date:'required|string',
         ticketed: 'required|boolean',
         cost: 'required|string'
     };
