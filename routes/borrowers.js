@@ -9,7 +9,7 @@ const OAuth = require("../middleware/authorize");
 
 // Validation and Oauth added after testing of routes
 
-router.get('/', OAuth.checkLogAll, borrowerController.getAll);
+router.get('/', /*OAuth.checkLogAll,*/ borrowerController.getAll);
 
 router.get('/:id', OAuth.checkLogAll, borrowerController.getSingle);
 

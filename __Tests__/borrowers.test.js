@@ -30,7 +30,7 @@
 // });
 
 //From Instructor code:
-const app = require('../borrowers')
+const app = require('../routes/borrowers')
 const supertest = require('supertest');
 const { expect } = require('@jest/globals');
 const request = supertest(app)
