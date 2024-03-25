@@ -6,6 +6,6 @@ const { expect } = require('@jest/globals');
 describe('Test Handlers', () => {
     
     test('tests borrowers.getAll', async () => {
-        expect(borrowerController.getAll().toBe(200)); 
+        expect(borrowerController.getAll(res).toBe(200)); 
     })
 })

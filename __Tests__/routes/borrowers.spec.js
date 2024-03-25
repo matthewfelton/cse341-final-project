@@ -66,10 +66,4 @@ describe('Test Handlers', () => {
         const res = await supertest(URL).post("/borrowers").send(payload);
         expect(res.status).toBe(201);
     })
-
-    // test('responds to /borrowers', async () => {
-    //     const res = await supertest(URL).post('/borrowers');
-    //     expect(res.header['content-type']).toBe('application/json; charset=utf-8');
-    //     expect(res.statusCode).toBe(200)
-    // })
 })
