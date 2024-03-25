@@ -19,6 +19,7 @@ const getAll = async (req, res, next) => {
         
         // Sending a JSON response with the fetched borrower
         res.status(200).json(lists);
+        return res.status;
     } catch (error) {
         // Handle errors here
         console.error("Error fetching borrowers:", error);
