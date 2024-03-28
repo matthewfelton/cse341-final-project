@@ -1,30 +1,48 @@
 const request = require('supertest');
-const app = require('../../server.js');
+const url = "http://localhost:8080"
 
- 
-describe('Test Route', () => {
-  test('GET /route - success', async () => {
-    const response = await request(app).get('/borrowers'); 
-    // expect(response.statusCode).toBeGreaterThan(99);
-    // expect(response.statusCode).toBeLessThan(600);
-        expect(response.statusCode).toBeGreaterThan(499);
-  });
-
-  test('should insert a doc into borrowers collection', async () => {
+describe('Test all my routes', () => {    
+    test('should insert a doc into collection', async () => {
         
-        const payload = {
-            "firstName": "Annmarie",
-            "lastName": "SanSevero",
-            "dateBorrowed": "2023-12-31",
-            "inventoryBorrowed": "Babylon 5",
-            "dateDue": "2024-02-31",
-            "conditionReturned": "n/a"
-        };
-    
-        const res = await request(app).post("/borrowers").send(payload);
-        expect(res.status).toBe(401);
-    })
+    const payload = {
+        "firstName": "Josh",
+        "lastName": "Herring",
+        "dateBorrowed": "2023-12-31",
+        "inventoryBorrowed": "Dune",
+        "dateDue": "2024-02-31",
+        "conditionReturned": "n/a"
+    } 
 
-    
+    const res = await request(url).post("/borrowers").send(payload).expect(201)
+
+    id = res.text.split(":")[2].replace('"', "").replace("}", "").replace('"', "")
+});
+
+test("Should get all docs from the collection", async () => {
+    const res = await request(url).get("/borrowers").expect(200)
+})
+
+test("Should get a doc from the collection", async () => {
+    const res = await request(url).get("/borrowers/" + id).expect(200)
+})
+
+test("Should update a doc from the collection", async () => {
+
+    const payload = {
+        "firstName": "Josh",
+        "lastName": "Herring",
+        "dateBorrowed": "2023-12-31",
+        "inventoryBorrowed": "Ranger's Apprentice",
+        "dateDue": "2024-02-31",
+        "conditionReturned": "n/a"
+      } ;
+    const res = await request(url).put("/borrowers/" + id).send(payload).expect(204)
+})
+
+
+test("Should remove a doc from the collection", async () => {
+    const res = await request(url).delete("/borrowers/" + id).expect(204)
+})
+
 
 });
