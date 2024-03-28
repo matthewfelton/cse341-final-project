@@ -5,17 +5,11 @@ const mongodb = require('../db/connection');
 // important ObjectId and allows single pull borrower to work and not error out and murder the server
 const ObjectId = require('mongodb').ObjectId;
 
-//New function: Find
-
-const find = async () => {
-    return await mongodb.getDb().db().collection('borrowers').find();
-}
-
 // pull all borrowers from db and creats an array using asynchronous fuction
 const getAll = async (req, res, next) => {
     try {
         // Using MongoDB's async API to get the 'borrower' collection 
-        const result = await find(); //await mongodb.getDb().db().collection('borrowers').find();
+        const result = await mongodb.getDb().db().collection('borrowers').find();
         
         // Converting the result to an array
         const lists = await result.toArray();
@@ -149,6 +143,5 @@ module.exports = {
     getSingle,
     newBorrower,
     updateBorrower,
-    deleteBorrrower, 
-    find
+    deleteBorrrower
 };
