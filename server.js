@@ -54,3 +54,5 @@ mongodb.initDb((err) => {
         console.log(`The Database has connected, and the server is now actively listening on ${port}`);
     }
 });
+
+module.exports = app;
