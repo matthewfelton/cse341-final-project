@@ -9,8 +9,8 @@ describe('Test all my routes', () => {
         "eventType": "Workshop",
         "creator": "Danuta Raine",
         "date": "2024-06-18",
-        "ticketed": false,
-        "cost": 0.00
+        "ticketed": "false",
+        "cost": "0.00"
     } 
 
     const res = await request(url).post("/event").send(payload).expect(201)
@@ -33,8 +33,8 @@ test("Should update a doc from the collection", async () => {
         "eventType": "Workshop",
         "creator": "Danuta Raine",
         "date": "2024-06-18",
-        "ticketed": false,
-        "cost": 0.00
+        "ticketed": "false",
+        "cost": "0.00"
     } ;
     const res = await request(url).put("/event/" + id).send(payload).expect(204)
 })
