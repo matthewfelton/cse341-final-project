@@ -21,8 +21,8 @@ describe('Test Route', () => {
             "conditionReturned": "n/a"
         };
     
-        const res = await request(URL).post("/borrowers").send(payload);
-        expect(res.status).toBe(500);
+        const res = await request(app).post("/borrowers").send(payload);
+        expect(res.status).toBe(401);
     })
 
 });
