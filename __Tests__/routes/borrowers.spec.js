@@ -4,7 +4,7 @@ const app = require('../../server.js');
  
 describe('Test Route', () => {
   test('GET /route - success', async () => {
-    const response = await request(app).get('/borrowers'); // Replace '/route' with your route
+    const response = await request(app).get('/borrowers'); 
     // expect(response.statusCode).toBeGreaterThan(99);
     // expect(response.statusCode).toBeLessThan(600);
         expect(response.statusCode).toBeGreaterThan(499);
@@ -24,5 +24,7 @@ describe('Test Route', () => {
         const res = await request(app).post("/borrowers").send(payload);
         expect(res.status).toBe(401);
     })
+
+    
 
 });
