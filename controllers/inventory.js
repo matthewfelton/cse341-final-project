@@ -33,7 +33,7 @@ const getSingle = async (req, res, next) => {
         const result = await mongodb
             .getDb()
             .db()
-            .collection('inventorys')
+            .collection('inventory')
             .find({ _id: inventoryId });
     
         const lists = await result.toArray();

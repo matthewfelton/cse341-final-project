@@ -9,9 +9,9 @@ describe('Test all my routes', () => {
         "contentType": "Book",
         "contentCreator": "George Orwell",
         "releaseDate": "1949-06-08",
-        "quantity": 50,
+        "quantity": "50",
         "averageCondition": "Fair",
-        "physicalCopy": true
+        "physicalCopy": "true"
     } 
 
     const res = await request(url).post("/inventory").send(payload).expect(201)
@@ -34,10 +34,10 @@ test("Should update a doc from the collection", async () => {
         "contentType": "Book",
         "contentCreator": "George Orwell",
         "releaseDate": "1949-06-08",
-        "quantity": 50,
+        "quantity": "50",
         "averageCondition": "Fair",
-        "physicalCopy": true
-      } ;
+        "physicalCopy": "true"
+    } ;
     const res = await request(url).put("/inventory/" + id).send(payload).expect(204)
 })
 
