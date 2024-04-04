@@ -9,15 +9,15 @@ const OAuth = require("../middleware/authorize");
 
 // Validation and Oauth added after testing of routes
 
-router.get('/', OAuth.checkLogAll, borrowerController.getAll);
+router.get('/', /* OAuth.checkLogAll, */ borrowerController.getAll);
 
-router.get('/:id', OAuth.checkLogAll, borrowerController.getSingle);
+router.get('/:id',/*  OAuth.checkLogAll, */ borrowerController.getSingle);
 
-router.post('/', OAuth.checkLogAll, validation.saveBorrowers, borrowerController.newBorrower);
+router.post('/', /* OAuth.checkLogAll, */ validation.saveBorrowers, borrowerController.newBorrower);
 
-router.put('/:id', OAuth.checkLogAll, validation.saveBorrowers, borrowerController.updateBorrower);
+router.put('/:id', /* OAuth.checkLogAll, */ validation.saveBorrowers, borrowerController.updateBorrower);
 
-router.delete('/:id', OAuth.checkLogAll, borrowerController.deleteBorrrower);
+router.delete('/:id', /* OAuth.checkLogAll,  */borrowerController.deleteBorrrower);
 
 // export module for rest of code to use
 module.exports = router;
