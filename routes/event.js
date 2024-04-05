@@ -13,11 +13,11 @@ router.get('/', eventController.getAll);
 
 router.get('/:id', eventController.getSingle);
 
-router.post('/', /*OAuth.checkLogStatus,*/ validation.saveEvent, eventController.newEvent);
+router.post('/', OAuth.checkLogStatus, validation.saveEvent, eventController.newEvent);
 
-router.put('/:id', /*OAuth.checkLogStatus,*/ validation.saveEvent, eventController.updateEvent);
+router.put('/:id', OAuth.checkLogStatus, validation.saveEvent, eventController.updateEvent);
 
-router.delete('/:id', /*OAuth.checkLogStatus,*/ eventController.deleteEvent);
+router.delete('/:id', OAuth.checkLogStatus, eventController.deleteEvent);
 
 // export module for rest of code to use
 module.exports = router;
