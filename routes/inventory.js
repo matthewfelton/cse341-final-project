@@ -14,11 +14,11 @@ router.get('/', inventoryController.getAll);
 
 router.get('/:id', inventoryController.getSingle);
 
-router.post('/', /* OAuth.checkLogStatus, */ validation.saveInventory, inventoryController.newInventory);
+router.post('/', OAuth.checkLogStatus, validation.saveInventory, inventoryController.newInventory);
 
-router.put('/:id', /* OAuth.checkLogStatus, */ validation.saveInventory, inventoryController.updateInventory);
+router.put('/:id', OAuth.checkLogStatus,  validation.saveInventory, inventoryController.updateInventory);
 
-router.delete('/:id', /* OAuth.checkLogStatus, */ inventoryController.deleteInventory);
+router.delete('/:id',  OAuth.checkLogStatus, inventoryController.deleteInventory);
 
 // export module for rest of code to use
 module.exports = router;
